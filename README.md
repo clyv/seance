@@ -5,14 +5,15 @@
 Séance is a private, offline archive for the stories your elders tell. Record your
 grandmother talking about the house she grew up in. An open Whisper model transcribes it,
 Gemma (running on your own computer through Ollama) writes a memory card, and later you can
-ask the archive things like *"What did Grandma say about the monsoon?"* The answer comes
+ask the archive things like _"What did Grandma say about the monsoon?"_ The answer comes
 back with her exact words, the minute she said them, and a button that plays that moment.
 
 It also builds an **ofrenda**, a single web page in the spirit of Día de los Muertos, that
 gathers each person's words, places, years and the questions you still want to ask them.
 
 <!-- Replace with your demo video link -->
-> 🎬 **Demo:** _add your demo video here_
+
+> 🎬 **Demo:** [Watch on YouTube](https://youtu.be/5RSh-lp1GBw)
 
 Built for the [DEV Hacktoberfest 2026 Open-Source AI Challenge, Week 4: Ghost in the Machine](https://dev.to/challenges/hacktoberfest-week4-2026-10-26).
 
@@ -95,8 +96,8 @@ flowchart LR
    with the transcript's own words and timestamp, or dropped.
 4. **Index.** Transcripts are cut into short overlapping passages. Search combines keyword
    search (BM25, pure Python) with EmbeddingGemma vectors if you've pulled that model.
-   Each passage is also tagged with the card's moment headings, so *"the flood"* finds a
-   passage where Grandma only ever said *"the water came up to the steps"*.
+   Each passage is also tagged with the card's moment headings, so _"the flood"_ finds a
+   passage where Grandma only ever said _"the water came up to the steps"_.
 5. **Ask.** Gemma answers from the top passages and must cite them by quoting; the quotes go
    through the same check as step 3.
 6. **Ofrenda.** One offline HTML page per archive. Every quote has a ▶ button that plays that
@@ -167,13 +168,13 @@ seance add "PTT-20261028-WA0003.opus" --speaker Ammachi --language ml --translat
 
 You don't need to be in the same room. Most families already have the recordings:
 
-| Where it comes from | Usual file | How to get it onto your laptop |
-|---|---|---|
-| WhatsApp voice notes | `PTT-20261028-WA0003.opus` | Long-press the note → Share → save or email to yourself, or export the chat with media |
-| Phone call recorder | `.m4a`, `.amr`, `.3gp` | Copy from the phone's recordings folder (ask the person first; call recording laws vary) |
-| Voice recorder apps | `.m4a`, `.mp3`, `.wav` | Share or sync the file |
-| Family videos | `.mp4`, `.mov`, `.mkv` | The sound track is used; the video isn't copied |
-| Old dictaphones, CDs, Windows recordings | `.wma`, `.aiff`, `.flac` | Copy the files over |
+| Where it comes from                      | Usual file                 | How to get it onto your laptop                                                           |
+| ---------------------------------------- | -------------------------- | ---------------------------------------------------------------------------------------- |
+| WhatsApp voice notes                     | `PTT-20261028-WA0003.opus` | Long-press the note → Share → save or email to yourself, or export the chat with media   |
+| Phone call recorder                      | `.m4a`, `.amr`, `.3gp`     | Copy from the phone's recordings folder (ask the person first; call recording laws vary) |
+| Voice recorder apps                      | `.m4a`, `.mp3`, `.wav`     | Share or sync the file                                                                   |
+| Family videos                            | `.mp4`, `.mov`, `.mkv`     | The sound track is used; the video isn't copied                                          |
+| Old dictaphones, CDs, Windows recordings | `.wma`, `.aiff`, `.flac`   | Copy the files over                                                                      |
 
 ```bash
 seance add "PTT-20261028-WA0003.opus" --speaker Ammachi
@@ -223,28 +224,28 @@ words are in the transcript, not that the transcript heard them right.
 
 - **Ask first.** Tell the person what you're recording and that it stays on your computer.
 - Sit close, in a quiet room, with the phone between you. Fans and TVs hurt transcription.
-- Open questions work best: *"Tell me about the house you grew up in."* Then let them talk.
+- Open questions work best: _"Tell me about the house you grew up in."_ Then let them talk.
 - Run `seance questions` before your next visit. Gemma suggests follow-ups about things they
   mentioned but didn't explain.
 - Add details for the ofrenda: `seance person Grandma --relation "Dad's mother" --years "1940–2021" --photo grandma.jpg`
 
 ## Commands
 
-| Command | What it does |
-|---|---|
-| `seance init [--home DIR]` | Create the archive folder and config |
-| `seance doctor [--quick]` | Check Whisper, PyAV, Ollama, Gemma and EmbeddingGemma |
-| `seance add FILE... -s NAME [--title T] [--date D] [-l LANG] [--translate]` | Add recordings or `.txt` transcripts (or a whole folder) |
-| `seance record -s NAME [--seconds N] [-l LANG] [--translate]` | Record from the microphone, then add |
-| `seance ask ["QUESTION"] [-s NAME] [--play] [--passages]` | Ask a question; no question starts an interactive séance |
-| `seance play STORY [mm:ss] [--moment N]` | Play a moment from a story |
-| `seance list` / `seance show STORY [--transcript]` | Browse stories and memory cards |
-| `seance person NAME [--relation] [--years] [--photo] [--note]` | Details for the ofrenda |
-| `seance people` / `seance questions [-s NAME]` | Who's in the archive; what to ask next time |
-| `seance ofrenda [--title T] [-s NAME] [--open]` | Rebuild the ofrenda page |
-| `seance reindex` | Rebuild search (e.g. after pulling `embeddinggemma`) |
-| `seance remove STORY` | Move a story to the archive's `trash/` folder |
-| `seance stats` | What's in the archive, speeds, and how many quotes were rejected |
+| Command                                                                     | What it does                                                     |
+| --------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| `seance init [--home DIR]`                                                  | Create the archive folder and config                             |
+| `seance doctor [--quick]`                                                   | Check Whisper, PyAV, Ollama, Gemma and EmbeddingGemma            |
+| `seance add FILE... -s NAME [--title T] [--date D] [-l LANG] [--translate]` | Add recordings or `.txt` transcripts (or a whole folder)         |
+| `seance record -s NAME [--seconds N] [-l LANG] [--translate]`               | Record from the microphone, then add                             |
+| `seance ask ["QUESTION"] [-s NAME] [--play] [--passages]`                   | Ask a question; no question starts an interactive séance         |
+| `seance play STORY [mm:ss] [--moment N]`                                    | Play a moment from a story                                       |
+| `seance list` / `seance show STORY [--transcript]`                          | Browse stories and memory cards                                  |
+| `seance person NAME [--relation] [--years] [--photo] [--note]`              | Details for the ofrenda                                          |
+| `seance people` / `seance questions [-s NAME]`                              | Who's in the archive; what to ask next time                      |
+| `seance ofrenda [--title T] [-s NAME] [--open]`                             | Rebuild the ofrenda page                                         |
+| `seance reindex`                                                            | Rebuild search (e.g. after pulling `embeddinggemma`)             |
+| `seance remove STORY`                                                       | Move a story to the archive's `trash/` folder                    |
+| `seance stats`                                                              | What's in the archive, speeds, and how many quotes were rejected |
 
 ## The archive is just files
 

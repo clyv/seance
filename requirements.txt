@@ -1,0 +1,6 @@
+faster-whisper>=1.0
+av>=11,<16
+tomli>=2.0; python_version < "3.11"
+# optional, for `seance record` and `--play`
+sounddevice>=0.4
+numpy>=1.24

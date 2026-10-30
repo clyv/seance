@@ -1,0 +1,15 @@
+# Sample transcript (fictional), in the timestamped format Séance writes.
+# Try:  seance add samples/grandma_the_house_in_kerala.txt --speaker Grandma
+[00:00] Okay, is it recording? The little red light is on. Good.
+[00:04] So you want to know about the house. Our house in Kottayam was not big, but it had a long verandah, and in the evenings everybody sat there.
+[00:14] My father would read the newspaper out loud, the whole thing, even the advertisements, and we had to sit and listen.
+[00:22] He was strict, my father. If you came home after the lamp was lit, you got no dinner. That was the rule.
+[00:31] Behind the house there was a well, and next to the well there was a mango tree. Every May the whole street came for our mangoes, and my mother would send a basket to the church too.
+[00:44] I was the youngest of five. My brother Joseph used to climb that tree and throw the mangoes down to me, and I had to catch them in my skirt.
+[00:54] One year he fell, I think it was 1958, he broke his arm, and my father cut the lowest branch so nobody could climb it again. Joseph was so angry.
+[01:07] (Interviewer) Do you remember the monsoon in that house?
+[01:10] Oh, the monsoon. In 1961 the water came right up to the verandah steps. We put the rice sacks on the beds and slept on top of the cupboard, me and my sister Annamma.
+[01:23] My mother was not afraid of anything. She made kanji for the whole lane on a little fire in the kitchen, and the water was coming in the front door.
+[01:34] That is where I learned to cook, actually. Standing on a stool next to her in the smoke.
+[01:41] When I married your grandfather in 1965, I took the recipe for her fish curry and nothing else. That curry is the one you all eat at Christmas now.
+[01:52] The house is sold now. Somebody built two shops there. But when I close my eyes I can still smell the mangoes and the woodsmoke.

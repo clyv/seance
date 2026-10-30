@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+
+# Family recordings never go to GitHub
+*.m4a
+*.mp3
+*.wav
+*.ogg
+*.opus
+*.flac
+*.aac
+*.amr
+*.3gp
+*.wma
+*.webm
+*.mp4
+*.mov
+seance.toml
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.zip
+*.bak

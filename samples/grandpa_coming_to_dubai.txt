@@ -1,0 +1,15 @@
+# Sample transcript (fictional), in the timestamped format Séance writes.
+# Try:  seance add samples/grandpa_coming_to_dubai.txt --speaker Grandpa
+[00:00] You want the Dubai story again? Alright. Sit down then.
+[00:05] I came in 1976. Not by plane, by ship, from Bombay. Four days on the ship, and I was sick for three of them.
+[00:15] I had one suitcase and a letter from my uncle Varghese, who was already working here in a trading company in Deira.
+[00:25] When we arrived it was June, and the heat, my God, the heat. I thought I will go back on the same ship.
+[00:33] There was no metro, nothing like now. To cross the Creek you took the abra, the little wooden boat, for a few fils.
+[00:42] We stayed eight men in one room near the fish market. We cooked in turns, and on my turn everybody complained, because I only knew how to make rice.
+[00:53] My first job was in the office of a shipping company. I typed the bills of lading on a big typewriter. If you made a mistake, you started the whole page again.
+[01:05] (Interviewer) How did you talk to Grandma back home?
+[01:08] Letters. Every Friday I wrote a letter, blue paper, the kind that folds into its own envelope. It took two weeks to reach Kerala.
+[01:18] Phone calls were only for big things, from the post office, and you had to book the call and wait. I called her once when your father was born, in 1979. Three minutes. I still remember what it cost.
+[01:32] I sent money home every month. Your grandmother built the kitchen in the new house from that money, every brick.
+[01:41] In 1984 I finally brought her and your father here. We got a flat in Karama with a balcony, and she said, this is the first time I have a balcony and no mango tree.
+[01:53] People think it was hard, and it was hard. But we were young, and everybody in that room was in the same boat. Literally, the same boat.

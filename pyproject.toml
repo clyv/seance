@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seance"
+version = "0.1.0"
+description = "A local oral-history archive: record family stories, ask them questions, hear the answers in their own voices. Open Whisper + local Gemma, nothing leaves your machine."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Clivin John Geju" }]
+keywords = ["gemma", "whisper", "ollama", "oral-history", "family", "local-ai", "hacktoberfest"]
+dependencies = [
+    "faster-whisper>=1.0",
+    # faster-whisper 1.2.x passes an argument that PyAV 16+ no longer accepts.
+    "av>=11,<16",
+    "tomli>=2.0; python_version < '3.11'",
+]
+
+[project.optional-dependencies]
+# Recording from the computer's microphone and playing clips back
+audio = ["sounddevice>=0.4", "numpy>=1.24"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+seance = "seance.cli:main"
+
+[tool.setuptools]
+packages = ["seance"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

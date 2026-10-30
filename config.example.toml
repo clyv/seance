@@ -1,0 +1,28 @@
+# Séance configuration
+# Paths accept ~ and environment variables. On Windows, forward slashes work fine,
+# e.g. "C:/Users/you/Documents/Family Stories".
+
+# Where the archive lives: recordings, transcripts, memory cards and the ofrenda page
+home = "~/Seance"
+
+[llm]
+url = "http://localhost:11434"   # local Ollama server
+model = "gemma4:e4b"             # any Gemma tag you have pulled, e.g. gemma4:e2b
+embed_model = "embeddinggemma"   # optional; used for search if pulled, otherwise keyword search
+num_ctx = 8192                   # context window passed to Ollama
+timeout = 600                    # seconds
+
+[whisper]
+model = "small"        # tiny | base | small | medium | large-v3 | turbo, or a Hugging Face repo of a
+                       # CTranslate2 Whisper model, e.g. a Malayalam fine-tune (see the README)
+translate_model = ""   # model for --translate; empty = same as model. Set to "medium" if `model`
+                       # is a single-language fine-tune, since those usually can't translate
+device = "cpu"         # cpu | cuda (cuda needs NVIDIA CUDA 12 libraries installed)
+compute_type = "int8"  # int8 is fast on CPU; float16 is a good choice on an NVIDIA GPU
+language = ""          # e.g. "ml" for Malayalam, "hi" for Hindi; empty = auto-detect
+translate = false      # also make an English translation of non-English recordings
+
+[archive]
+chunk_words = 110      # size of the transcript passages used for search
+card_max_words = 2800  # longer transcripts are summarised in parts, then merged
+top_k = 6              # passages Gemma reads when answering a question
